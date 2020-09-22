@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle8iDialect</property>
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:ORCL</property>
+		<property name="hibernate.connection.username">boris</property>
+		<property name="hibernate.connection.password">pass</property>
+		<property name="hibernate.jdbc.use_get_generated_keys">true</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<mapping class="com.boris.entity.Impiegato"></mapping>
+		<mapping class="com.boris.entity.Indirizzo"></mapping>
+	</session-factory>
+</hibernate-configuration>
